@@ -99,16 +99,17 @@ class OfplanningController extends Controller
             'qte_plan' => 'required|integer|min:1',
             'qte_reel' => 'nullable|integer|min:0',
             'statut' => 'required|in:Planifié,En cours,Réalisé,Traité',
-            'Priority'=> 'nullable|integer|min:0',
+            'priority'=> 'required|integer|min:0',
             'qty_produced'=> 'nullable|integer|min:0',
             'date_planifie' => 'required|date',
             'instruction' => 'nullable|string|max:500',
             'comment' => 'nullable|string|max:800',
         ]);
         $validated['qte_reel'] = $validated['qte_reel'] ?? 0;
-        $validated['Priority'] = $validated['Priority'] ?? 0;
+        $validated['priority'] = $validated['priority'] ?? 0;
         $validated['qty_produced'] = $validated['qty_produced'] ?? 0;
-
+        $validated['Priority'] = $validated['priority'];
+        unset($validated['priority']);
         if ($request->filled('id')) {
             $of = Ofplanning::findOrFail($request->id);
             $of->update($validated);
