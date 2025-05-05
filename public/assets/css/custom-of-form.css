@@ -1,0 +1,79 @@
+/* ---------------------------------------------
+   Elegant OF Form Styles
+   --------------------------------------------- */
+.form-card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.remove-btn {
+    color: red;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5A5A5A;
+    border-bottom: 2px solid #E0E0E0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.input-group-addon {
+    font-size: 0.9rem;
+    color: #5A5A5A;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #45A049;
+}
+
+/* Form Input Focus Style */
+.form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Select2 Style Override */
+.select2-container--default .select2-selection--single {
+    border-radius: 5px;
+    height: 38px;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 30px;
+}
+
+.select2-container .select2-selection--single .select2-selection__arrow {
+    height: 36px;
+}
+
+/* Smooth Animation for Removing Forms */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}

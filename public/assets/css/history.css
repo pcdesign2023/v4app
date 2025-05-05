@@ -1,0 +1,19 @@
+/* Ensure modal and table are responsive */
+.modal-dialog {
+    max-width: 90%; /* Adjust as needed */
+    margin: 1.75rem auto;
+}
+
+.modal-content {
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+.table-responsive {
+    overflow-x: auto; /* Add horizontal scroll for small screens */
+}
+
+/* Optional: Adjust table column widths */
+#history-table th,
+#history-table td {
+    white-space: nowrap; /* Prevent text wrapping */
+}
